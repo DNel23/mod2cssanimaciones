@@ -1,0 +1,143 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.menu{
+    grid-area: menu1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(211, 113, 113, 0.781);
+    color: white;
+    padding: 0%;
+    margin: 0%;
+}
+.productos{
+    grid-area: productos1;
+    background-color: white;
+    padding: 0%;
+    margin: 0%;
+}
+.pie{
+    grid-area: pie1;
+    background-color:rgba(211, 113, 113, 0.541);
+    color: white;
+    text-align: center;
+    
+}
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'menu1'
+    'productos1'
+    'pie1';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto-fit;
+}
+.logo3{
+    width:100%;
+    height: 30%;
+    padding: 0%;
+    margin: 0%;
+    border-end-end-radius: 30%;
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 30%;
+}
+.linkint{
+    color: white; 
+}
+.listado_productos{
+    display:grid; 
+    justify-content:space-around;
+    align-items:center;
+   
+}
+.descripcion{
+    position:relative;
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid lightpink;
+    border-radius: 5%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color:rgba(224, 68, 68, 0.87);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.imgropa{
+    width: 80%;
+    height: 80%;
+    border-radius: 10%;
+    transition: all 0.5s ease-out;
+}
+.descripcion:hover .desc{
+    opacity:1;
+}
+.imgropa:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+    
+ }
+.encabezado{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.logobf{
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    padding: 0%;
+    transform: rotate(0deg);
+}
+.logobf:hover{
+    transform: rotate(45deg);
+}
+
+h3{
+    padding: 5px;
+    font-size: 15px;
+}
+.redes_s{
+    margin-top: 5%;
+}
+@media (min-width: 576px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        'menu1 productos1'
+        'menu1 productos1'
+        'pie1 pie1';
+        grid-template-columns: 20% 1fr
+    }
+    .listado_productos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (min-width: 760px) {
+    .listado_productos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.footermov{
+    font-size: 10px;
+    animation: move 15s infinite;
+ }
+ @keyframes move {
+    from {
+        transform: translate(-200px);
+    }
+    to{
+        transform: translateX(200px);
+    }
+ }
+ 
+
